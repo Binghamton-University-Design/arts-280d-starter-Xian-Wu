@@ -1,7 +1,14 @@
- body {
-  background-color: #ffffff;
-  color: #333333;
+/* vars */
+:root {
+  --background-color: #fff;
+  --body-color: #111;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--body-color);
   font-family: 'Roboto Mono', monospace;
+  line-height: 1.5;
 }
 
 /*GENERAL*/
@@ -12,8 +19,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 6.2rem;
-  background-color: pink;
+  font-size: 4.2rem
 }
 
 h2 {
@@ -21,7 +27,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem; 
+  font-size: 1.6rem;
 }
 
 h4 {
@@ -189,7 +195,8 @@ transition: text-decoration-color .3s ease-in-out;
   height: 70vh;
 }
 
-#work h3 {
+#work h3, #writing h3 {
+  letter-spacing: 1px;
   margin-bottom: 2rem;
 }
 
@@ -238,6 +245,36 @@ transition: text-decoration-color .3s ease-in-out;
   height: 100%;
 }
 
+.writing-item .date-holder {
+  margin-bottom: .25em;
+}
+
+.writing-item .date {
+  margin: 0;
+  font-size: .85rem;
+  padding: 0 4px;
+  color: var(--background-color);
+  display: inline-block;
+  background-color: var(--body-color);
+}
+
+.writing-item h2 a {
+  color: var(--body-color);
+  text-decoration-color: transparent; 
+  transition: text-decoration-color .3s ease-in-out;
+}
+
+.writing-item h2 a:hover {
+  color: var(--body-color);
+  text-decoration-color: var(--body-color); 
+}
+
+.writing-item p a {
+  color: var(--body-color);
+  text-decoration-color: var(--body-color); 
+}
+
+
 /*FOOTER*/
 
 #footer {
@@ -245,13 +282,12 @@ transition: text-decoration-color .3s ease-in-out;
   font-size: .85rem;
 }
 
-
 /*RESPONSIVE*/
 
 /* for variable type sizing */
 @media screen and (min-width: 320px) {
-   body {
-     font-size: calc(12px + 4 * ((100vw - 320px) / 960));
+  body {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 960));
   }
 }
 
@@ -269,8 +305,8 @@ transition: text-decoration-color .3s ease-in-out;
     flex-basis: 100%;
     margin-bottom: 1rem;
   } 
-  #intro-holder h1{
-    font-size: 3.2rem;
+  #intro-holder h1 {
+    font-size: 3.2rem
   }
 
   .work-item .inner .work-inside {
@@ -289,19 +325,8 @@ transition: text-decoration-color .3s ease-in-out;
     padding: 0 5em;
   }
 
-
-
 }
 
 body {
-  font-size: 18px;
-}
-
-
-
-
-
-
-
-
-
+    font-size: 18px;
+  }
