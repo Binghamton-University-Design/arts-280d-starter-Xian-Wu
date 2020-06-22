@@ -1,6 +1,12 @@
- body {
-  background-color: #ffffff;
-  color: #333333;
+/* vars */
+:root {
+  --background-color: #fff;
+  --body-color: #111;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--body-color);
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -9,7 +15,7 @@
 h1, h2, h3, h4 {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-}
+} 
 
 h1 {
   font-size: 6.2rem;
@@ -189,7 +195,8 @@ transition: text-decoration-color .3s ease-in-out;
   height: 70vh;
 }
 
-#work h3 {
+#work h3, #writing h3 {
+  letter-spacing: 1px;
   margin-bottom: 2rem;
 }
 
@@ -236,6 +243,35 @@ transition: text-decoration-color .3s ease-in-out;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.writing-item .date-holder {
+  margin-bottom: .25em;
+}
+
+.writing-item .date {
+  margin: 1;
+  font-size: 1rem;
+  padding: .7 4px;
+  color: var(--background-color);
+  display: inline-block;
+  background-color: pink;
+}
+
+.writing-item h2 a {
+  color: var(--body-color);
+  text-decoration-color: transparent; 
+  transition: text-decoration-color .3s ease-in-out;
+}
+
+.writing-item h2 a:hover {
+  color: var(--body-color);
+  text-decoration-color: var(--body-color); 
+}
+
+.writing-item p a {
+  color: purple;
+  text-decoration-color: purple; 
 }
 
 /*FOOTER*/
