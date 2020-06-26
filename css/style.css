@@ -84,7 +84,7 @@ text-align: center;
 transition: text-decoration-color .3s ease-in-out;
 }
 
-#nav a:hover { 
+#nav a:hover, #nav a.active { 
   text-decoration-color: var(--body-color);
 }
 
@@ -195,12 +195,12 @@ transition: text-decoration-color .3s ease-in-out;
   height: 70vh;
 }
 
-#work h3, #writing h3, #portfolio h3 {
+#work h3, #writings h3, #portfolio h3 {
   letter-spacing: 1px;
   margin-bottom: 2rem;
 }
 
-#work h3 a, #writing h3 a, #protfolio h3 a {
+#work h3 a, #writings h3 a, #protfolio h3 a {
   color: var(--body-color);
   text-decoration: none;
 }
@@ -254,6 +254,12 @@ transition: text-decoration-color .3s ease-in-out;
   margin-bottom: .25em;
 }
 
+.writing-item img {
+  display: block;
+  width: 100%;  
+  height: auto;
+}
+
 .writing-item .date {
   margin: 1;
   font-size: 1rem;
@@ -279,10 +285,11 @@ transition: text-decoration-color .3s ease-in-out;
   text-decoration-color: purple; 
 }
 
-/*PORTFOLIO*/
+/*PORTFOLIO + WRITING*/
 
-#portfolio {
+#portfolio, #writings {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /*
